@@ -1,0 +1,25 @@
+type Query {
+    getComputerByProce(proce: String): [ComputerDTO]
+}
+
+type Mutation {
+    saveComputer(computerDetail: ComputerDetails): ComputerDTO
+}
+
+
+type ComputerDTO {
+    proce: String
+    ram: String
+    hardDrive: String
+    price: Float
+    macAddress: String
+}
+
+
+input ComputerDetails {
+    proce: String
+    ram: String
+    hardDrive: String
+    price: Float
+    macAddress: String
+}
